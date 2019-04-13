@@ -10,7 +10,7 @@ export default class SearcInput extends Component {
   };
 
   onSubmitForm = e => {
-    console.log(this.state.imageTitle);
+    this.props.onSubmit(this.state.imageTitle);
     e.preventDefault();
   };
 
