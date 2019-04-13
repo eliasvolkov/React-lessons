@@ -7,8 +7,14 @@ class App extends Component {
   };
 
   onSubmitForm = title => {
-    console.log(title);
+    fetch(
+      `https://pixabay.com/api/?key=12000177-898b69bbe8214f36d3fa09010&q=${title}`
+    )
+      .then(res => res.json())
+      .then(data => console.log(data.hits))
+      .catch(err => err);
   };
+
   render() {
     return (
       <div className="container">
