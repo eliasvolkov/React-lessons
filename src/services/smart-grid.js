@@ -24,6 +24,9 @@ const settings = {
     },
     xs: {
       width: "560px"
+    },
+    xss: {
+      width: "375px"
     }
     /* 
         We can create any quantity of break points.
