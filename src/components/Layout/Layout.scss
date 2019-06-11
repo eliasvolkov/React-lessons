@@ -1,0 +1,11 @@
+@import "../../services/smart-grid.scss";
+@import "../../services/variables.scss";
+
+html {
+  @include reset();
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  background-color: $body-color;
+}
