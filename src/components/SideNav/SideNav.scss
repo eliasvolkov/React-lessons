@@ -1,0 +1,66 @@
+@import "../../services/variables.scss";
+
+aside {
+  height: 100%;
+
+  a {
+    text-decoration: none;
+  }
+
+  .aside {
+    &__nav {
+      width: 20rem;
+      position: fixed;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.3rem;
+      color: #fff;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &__logo {
+      margin-bottom: 2rem;
+    }
+
+    &__title {
+      font-weight: bold;
+      padding: 0 2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    &__item {
+      padding: 0.9rem 2rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: $disable-text;
+      position: relative;
+
+      &:hover {
+        color: #fff;
+        cursor: pointer;
+      }
+
+      &--active {
+        font-weight: 700;
+        color: $second-color;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 0.2rem;
+          height: 2.7rem;
+          top: 0.4rem;
+          left: 0;
+          background-color: $second-color;
+        }
+      }
+    }
+
+    &__link::before {
+      content: "TT";
+      display: inline-block;
+      margin-right: 1.4rem;
+    }
+  }
+}

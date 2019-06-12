@@ -1,53 +1,57 @@
 @import "../../services/variables.scss";
+@import "../../services/smart-grid.scss";
 
 .header {
-  width: 100%;
-  background-color: $primary-color;
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   font-family: "Open Sans", sans-serif;
 
-  &::after {
-    bottom: -5px;
-    box-shadow: inset 0px 4px 8px -3px rgba(17, 17, 17, 0.06);
-    content: "";
-    height: 5px;
-    left: 0px;
-    opacity: 1;
-    pointer-events: none;
-    position: absolute;
-    right: 0px;
-    width: 100%;
-    z-index: 2050;
-  }
-
-  &__container {
-    width: 100%;
-    max-width: 1270px;
-    margin: 0 auto;
+  padding: 2rem;
+  &__form {
+    @include col();
+    @include size(4);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
   }
-
-  .nav {
-    margin-left: 50px;
-    &__items {
-      display: flex;
-      flex-wrap: wrap;
-      list-style: none;
+  .form {
+    &__input-group {
+      @include row-flex();
+      width: 100%;
+    }
+    &__btn {
+      @include size(2);
+      border: none;
+      border-radius: 1rem 0 0 1rem;
+      outline: none;
+      padding: 0.89rem;
+      color: #86888e;
+      background-color: #2d2e35;
     }
 
-    &__item {
-      padding: 20px;
-      a {
-        text-decoration: none;
-      }
+    &__input {
+      @include size(10);
+      border: none;
+      border-radius: 0 1rem 1rem 0;
+      outline: none;
+      padding: 0.6rem;
+      color: #86888e;
+      background-color: rgba(45, 46, 53, 0.9);
     }
+  }
 
-    &__link {
-      color: #ffffff;
+  .auth {
+    &__btn {
+      padding: 1rem;
+      border: none;
+      border-radius: 2rem;
+      outline: none;
+      color: #86888e;
+      background-color: #2d2e35;
+
       &:hover {
-        color: #e5e2e2;
+        cursor: pointer;
       }
     }
   }

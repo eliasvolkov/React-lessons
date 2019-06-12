@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./Header.scss";
 
 export default class Header extends Component {
@@ -10,31 +9,17 @@ export default class Header extends Component {
     return (
       <div>
         <header className="header">
-          <div className="header__container">
-            <div className="header__logo">
-              <Link to="/">
-                <a className="nav__link">LOGO</a>
-              </Link>
+          <form className="header__form">
+            <div className="form__input-group">
+              <button className="form__btn">
+                <i className="fa fa-search" aria-hidden="true" />
+              </button>
+              <input type="text" className="form__input" placeholder="Search" />
             </div>
-            <nav className="nav">
-              <ul className="nav__items">
-                <li className="nav__item">
-                  <Link to="/">
-                    <a className="nav__link">Главная</a>
-                  </Link>
-                </li>
-                <li className="nav__item">
-                  <Link to="/courses">
-                    <a className="nav__link">Курсы</a>
-                  </Link>
-                </li>
-                <li className="nav__item">
-                  <Link to="/about">
-                    <a className="nav__link">О нас</a>
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+          </form>
+          <div className="header__auth">
+            <div className="auth__icon" />
+            <button className="auth__btn">Sing in</button>
           </div>
         </header>
       </div>
